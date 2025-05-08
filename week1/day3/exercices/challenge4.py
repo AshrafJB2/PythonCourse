@@ -61,5 +61,14 @@ new_york_zoo.add_animal("parrot")
 new_york_zoo.add_animal("canary")
 new_york_zoo.add_animal("cockatiel")
 
+new_york_zoo.get_animals()
+
+new_york_zoo.sell_animal("cat")
+new_york_zoo.sell_animal("dog")
+
+new_york_zoo.get_animals()
+
+
+
 new_york_zoo.sort_animals()
 new_york_zoo.get_groups()
