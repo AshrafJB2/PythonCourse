@@ -1,30 +1,41 @@
-animals_dict = {}
-
 
 class Zoo:
+
     def __init__(self, zoo_name):
         self.name = zoo_name
         self.animals = []
+
     def add_animal(self,new_animal):
         if new_animal not in self.animals:
             self.animals.append(new_animal)
         else:
             print(f"{new_animal} is already in the zoo")
+
     def get_animals(self):
         print(self.animals)
+
     def sell_animal(self,animal_sold):
         if animal_sold in self.animals:
             self.animals.remove(animal_sold)
         else:
             print(f"{animal_sold} is not in the zoo")
+
     def sort_animals(self):
+        animals_dict = {}
         self.animals.sort()
         for animal in self.animals:
             if animal[0].upper() not in animals_dict:
-                animals_dict[animal[0].upper()] = []
-            animals_dict[animal[0].upper()].append(animal)
+                animals_dict[animal[0].upper()] = animal
+            else:
+                if isinstance(animals_dict[animal[0].upper()], list):
+                    animals_dict[animal[0].upper()].append(animal)
+                else:
+                    animals_dict[animal[0].upper()] = [animals_dict[animal[0].upper()], animal]
 
-    def get_groups(self):
+
+        return animals_dict
+
+    def get_groups(self, animals_dict):
         for key, value in animals_dict.items():
             print(f"{key}: {value}")
 
@@ -60,8 +71,7 @@ new_york_zoo.add_animal("guinea pig")
 new_york_zoo.add_animal("parrot")
 new_york_zoo.add_animal("canary")
 new_york_zoo.add_animal("cockatiel")
-
-new_york_zoo.get_animals()
+new_york_zoo.add_animal("parakeet")
 
 new_york_zoo.sell_animal("cat")
 new_york_zoo.sell_animal("dog")
@@ -69,6 +79,5 @@ new_york_zoo.sell_animal("dog")
 new_york_zoo.get_animals()
 
 
-
 new_york_zoo.sort_animals()
-new_york_zoo.get_groups()
+new_york_zoo.get_groups(new_york_zoo.sort_animals())
