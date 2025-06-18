@@ -1,9 +1,7 @@
 function isAnagram(str1, str2) {
-  let clean1 = str1.replace(/\s/g, '').toLowerCase();
-  let clean2 = str2.replace(/\s/g, '').toLowerCase();
-  let sorted1 = clean1.split('').sort().join('');
-  let sorted2 = clean2.split('').sort().join('');
-  return sorted1 === sorted2;
+  const clean = str => str.replace(/\s+/g, '').toLowerCase().split('').sort().join('');
+
+  return clean(str1) === clean(str2);
 }
 
 console.log(isAnagram("Astronomer", "Moon starer"));

@@ -1,47 +1,41 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  background-color: #0e0e0e;
+  color: white;
+  text-align: center;
 }
 
 .app-container {
-  text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #00ffe7;
-  text-shadow: 0 0 10px #00ffe7;
 }
 
 #searchBox {
-  padding: 12px 20px;
+  padding: 10px;
   width: 300px;
-  font-size: 1rem;
+  border-radius: 5px;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 0 10px #00ffe7;
-  outline: none;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  margin-bottom: 30px;
 }
 
-.cards-container {
+.robots-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .robot-card {
-  background-color: #1c1c1c;
-  border-radius: 20px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
   padding: 20px;
   width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 255, 231, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -51,17 +45,15 @@ h1 {
 
 .robot-card img {
   width: 100%;
-  border-radius: 50%;
-  border: 3px solid #00ffe7;
+  border-radius: 10px;
 }
 
-.robot-card h3 {
+.robot-card h2 {
+  font-size: 1.2rem;
   margin: 10px 0 5px;
-  font-size: 1.1rem;
-  color: #00ffe7;
 }
 
 .robot-card p {
   font-size: 0.9rem;
-  color: #ccc;
+  margin: 0;
 }
